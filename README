@@ -1,3 +1,8 @@
+Original version by @adnanmasood . This version was updated to Visual Studio 2015 and MVC 5.
+
+Note: currently only SQL injection is demonstrated in this application
+
+
 WebGoat.MVC
 
 WebGoat is a deliberately insecure ASP.NET MVC web application maintained by OWASP designed to teach web application security 
