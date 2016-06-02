@@ -16,7 +16,7 @@
 </td><td>Injection flaws, such as SQL, OS, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query. The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing unauthorized data.
 </td></tr>
 <tr>
-<td><center><a href="home/xss" title="Top 10 2010-A2" class="mw-redirect">A2-Cross Site Scripting (XSS)</a></center>
+<td><center><a href="xss" title="Top 10 2010-A2" class="mw-redirect">A2-Cross Site Scripting (XSS)</a></center>
 </td><td>XSS flaws occur whenever an application takes untrusted data and sends it to a web browser without proper validation and escaping. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.
 </td></tr>
 <tr>
