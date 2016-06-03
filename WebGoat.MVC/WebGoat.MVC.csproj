@@ -178,7 +178,7 @@
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Xss\Index.cshtml" />
+    <Content Include="Views\Xss\JsEncode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\About.cshtml" />

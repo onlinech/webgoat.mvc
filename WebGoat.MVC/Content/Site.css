@@ -335,3 +335,11 @@ div#title {
 a {
     cursor: pointer;
 }
+
+.owasp-summary .title {
+    text-align: center;
+}
+
+.owasp-summary .examples {
+    width: 20%;
+}

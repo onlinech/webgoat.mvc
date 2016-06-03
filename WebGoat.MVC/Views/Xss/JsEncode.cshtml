@@ -6,7 +6,7 @@
     ViewBag.Title = "Xss Example";
 }
 
-@using (Html.BeginForm("Index", "Xss", FormMethod.Get)){
+@using (Html.BeginForm("JsEncode", "Xss", FormMethod.Get)){
 @Html.TextAreaFor(m => m.Content)
     <input type="submit" value="submit">
 }
@@ -15,7 +15,7 @@
 @Model.Content
 
 
-<a href="/Xss?Content=%3B%0D%0A%7D%0D%0Aalert%282024%29%3B%0D%0Afunction+dummy%28%29%7B%2F%2F">Sample 1</a>
+<a href="/Xss/JsEncode?Content=%3B%0D%0A%7D%0D%0Aalert%282024%29%3B%0D%0Afunction+dummy%28%29%7B%2F%2F">Sample 1</a>
 
 
 
