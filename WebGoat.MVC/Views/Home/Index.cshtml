@@ -1,12 +1,11 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.Title = "WebGoat.MVC Home Page";
+}
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    WebGoat.MVC Home Page
-</asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%:ViewBag.Message%></h2>
-    <p>
+<h2>@ViewBag.Message</h2>
+<p>
         <div style="background-color: #558EDF; color: #FFFFFF; font-size: 180%; padding: 6px; padding-top: 8px; font-weight: bold; border: 3px solid #204A7F; border-right: none; border-left: none; margin: 0;">OWASP Top 10 Application Security Risks - 2010</div>
 <p><br />
 </p>
@@ -65,6 +64,6 @@
 <p><br />
 </p>
 <div align="center">
-    </p>
 </div>
-</asp:Content>
+
+

@@ -1,4 +1,5 @@
-﻿<<!DOCTYPE html>
+﻿@using System.Web.Mvc.Html
+<<!DOCTYPE html>
 <html>
 <head runat="server">
     <title>@ViewBag.Title</title>
@@ -19,8 +20,8 @@
             </div>
             <nav>
                 <ul id="menu">
-                    <li>@Html.ActionLink("Home", "Index", "Xss")</li>
-                    <li>@Html.ActionLink("About", "About", "Xss")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
             </nav>
         </header>
