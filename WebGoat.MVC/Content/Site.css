@@ -322,3 +322,17 @@ div#title {
 .tri-state {
     width: 6em;
 }
+
+
+/* ********************* CUSTOM STYLES ***************** */
+#status-area .flashMessage {
+    padding: 5px;
+    color: green;
+    border-radius: 2px;
+    background-color: lightblue;
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}

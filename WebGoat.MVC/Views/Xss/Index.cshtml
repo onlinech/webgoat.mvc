@@ -7,12 +7,27 @@
 }
 
 @using (Html.BeginForm("Index", "Xss", FormMethod.Get)){
-@Html.EditorFor(m => m.Content)
+@Html.TextAreaFor(m => m.Content)
     <input type="submit" value="submit">
 }
 
 <h1>Content:</h1>
 @Model.Content
+
+
+<a href="/Xss?Content=%3B%0D%0A%7D%0D%0Aalert%282024%29%3B%0D%0Afunction+dummy%28%29%7B%2F%2F">Sample 1</a>
+
+
+
+<script>
+    function tweetContent() {
+        //will do this later... var content = '@Model.Content';
+        //$('#status-area').flashMessage({
+        //    text: 'tweeted: ' + content,
+        //    how: 'append'
+        //});
+    }
+</script>
 
 
 
