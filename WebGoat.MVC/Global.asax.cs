@@ -4,9 +4,6 @@ using System.Web.Routing;
 
 namespace WebGoat.MVC
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : HttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
@@ -27,6 +24,9 @@ namespace WebGoat.MVC
 
         protected void Application_Start()
         {
+			ViewEngines.Engines.Clear();
+			ViewEngines.Engines.Add(new RazorViewEngine());
+
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
