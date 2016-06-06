@@ -1,0 +1,32 @@
+﻿
+@using WebGoat.MVC.Models
+@model HtmlXssViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.Title = "Classical Xss Example";
+}
+
+@using (Html.BeginForm("Classical", "Xss", FormMethod.Get)){
+    @Html.TextAreaFor(m => m.Content,new {@class = "comment-area"})
+    <div class="form-buttons">
+        <input type="submit" value="submit">
+    </div>
+}
+
+<h1>Content:</h1>
+@Html.Raw(Model.Content)
+
+<h1>Samples:</h1>
+<ul>
+    <li>@Html.ActionLink("fair use", "Classical", new {Content = "<b>hello world</b> <i>i'm italic</i>"})</li>
+    <li>@Html.ActionLink("XSS Note (does not work in Chrome)", "Classical", new {Content = "<script type=''>alert('compromised.');</script>"})</li>
+</ul>
+
+<h2>Chrome Anti XSS</h2>
+<p>
+    Chrome has some built in anti - XSS functionality which aims at filtering out malicious script content (from reflection attacks).
+    <ul>
+        <li>Don't rely on it when you're building websites (not everyone is using chrome)</li>
+        <li>Don't rely on it when you're surfing with chrome - it's just a best-effort attempt to deal with the simpler XSS attacks and no real security feature.</li>
+    </ul>
+</p>

@@ -9,9 +9,12 @@ namespace WebGoat.MVC.Controllers
     {
         public ActionResult JsEncode(XssViewModel model)
         {
-            ViewBag.Message = "Welcome to the Xss Example";
-
             return View(model);
         }
-    }
+
+		public ActionResult Classical(HtmlXssViewModel model)
+		{
+			return View(model);
+		}
+	}
 }

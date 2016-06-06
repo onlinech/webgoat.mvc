@@ -7,21 +7,29 @@
 }
 
 @using (Html.BeginForm("JsEncode", "Xss", FormMethod.Get)){
-@Html.TextAreaFor(m => m.Content)
-    <input type="submit" value="submit">
+    <div class="form-container">
+        @Html.TextAreaFor(m => m.Content)
+        <div class="form-buttons">
+            <input type="submit" value="submit">
+        </div>
+    </div>
 }
 
 <h1>Content:</h1>
 @Model.Content
 
-
-<a href="/Xss/JsEncode?Content=%3B%0D%0A%7D%0D%0Aalert%282024%29%3B%0D%0Afunction+dummy%28%29%7B%2F%2F">Sample 1</a>
-
-
+<h1>Samples:</h1>
+<ul>
+    <li><a href="/Xss/JsEncode?Content=%3B%0D%0A%7D%0D%0Aalert%282024%29%3B%0D%0Afunction+dummy%28%29%7B%2F%2F">Sample 1</a></li>
+</ul>
 
 <script>
     function tweetContent() {
-        //will do this later... var content = '@Model.Content';
+        @*Note about this vulnerability:
+        - HTML encode also encodes apostrophes (')
+        - That's why you cannot easily escape from a string (foo('@Model.Bar');)                
+        *@
+        //TODO:... var content = '@Model.Content';
         //$('#status-area').flashMessage({
         //    text: 'tweeted: ' + content,
         //    how: 'append'
