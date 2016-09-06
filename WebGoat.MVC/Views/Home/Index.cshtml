@@ -105,6 +105,7 @@
         <td class="examples">
             <ul>
                 <li>@Html.ActionLink("Login form redirect", "Login", "UnsafeRedirect")</li>
+                <li>@Html.ActionLink("Login form redirect to phishing site", "Login", "UnsafeRedirect", new {redirectUrl = "http://malicous/Content/phishing.html" }, null)</li>
             </ul>
         </td>
     </tr>

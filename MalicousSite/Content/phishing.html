@@ -1,0 +1,46 @@
+﻿<<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>title</title>
+    <link href="Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="status-area"></div>
+            <div id="title">
+                <h1>WebGoat.MVC - An OWASP Top 10 Analysis using ASP.NET MVC Framework</h1>
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="main">
+
+
+
+            <h2>Please log in to this site:</h2>
+            <p style="color:red">Sorry, Login failed. please retype your password to log in.</p>
+            <form action="http://localhost:59586/" method="get">
+                <fieldset>
+                    <legend>Login</legend>
+                    <div class="control-group">
+                        <label>username: </label><input type="text" name="username" />
+                    </div>
+                    <div class="control-group">
+                        <label>password: </label><input type="password" name="password" />
+                    </div>
+
+                    <input type="hidden" name="redirectUrl" value="/" />
+                    <p></p>
+                    <input type="submit" />
+                </fieldset>
+            </form>
+            <footer></footer>
+        </section>
+    </div>
+</body>
+</html>
