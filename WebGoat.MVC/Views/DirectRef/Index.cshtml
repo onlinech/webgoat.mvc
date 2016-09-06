@@ -1,0 +1,16 @@
+﻿
+@using WebGoat.MVC.Models
+@model HtmlXssViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.Title = "Insecure Direct References";
+}
+
+<h1>File Access</h1>
+
+<h1>Samples:</h1>
+<ul>
+    <li>@Html.ActionLink("file 1", "Files", new {fileName = "file1.txt"})</li>
+    <li>@Html.ActionLink("file 2", "Files", new {fileName = "file2.txt"})</li>
+    <li>@Html.ActionLink("Malicous", "Files", new { fileName = "..\\..\\web.config" })</li>
+</ul>
