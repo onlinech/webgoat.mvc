@@ -102,6 +102,11 @@
         <td>
             Web applications frequently redirect and forward users to other pages and websites, and use untrusted data to determine the destination pages. Without proper validation, attackers can redirect victims to phishing or malware sites, or use forwards to access unauthorized pages.
         </td>
+        <td class="examples">
+            <ul>
+                <li>@Html.ActionLink("Login form redirect", "Login", "UnsafeRedirect")</li>
+            </ul>
+        </td>
     </tr>
 </table>
 <h2> <span class="mw-headline" id="References">References</span></h2>
