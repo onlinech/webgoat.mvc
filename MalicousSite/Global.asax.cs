@@ -14,5 +14,7 @@ namespace MalicousSite
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
+
+		
     }
 }

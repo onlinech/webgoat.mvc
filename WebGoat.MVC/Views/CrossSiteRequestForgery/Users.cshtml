@@ -1,0 +1,21 @@
+﻿@using WebGoat.MVC.Models
+@model List<CreatedUser>
+    
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>@user.Username <i>Created by @user.CreatedByUser</i></li>
+    }
+</ul>
+
+
+@using (Html.BeginForm("CreateUser", "CrossSiteRequestForgery", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Add new USer</legend>
+        <div class="control-group">
+            <label>username: </label><input type="text" name="username" />
+        </div>
+        <input type="submit" />
+    </fieldset>
+}

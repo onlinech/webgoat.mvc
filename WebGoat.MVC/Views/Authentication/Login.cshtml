@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Login to Online WebGoat.MVC";
+}
+
+<h2>Please log in to this site:</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Login</legend>
+        <div class="control-group">
+            <label>username: </label><input type="text" name="username" />
+        </div>
+        <div class="control-group">
+            <label>password: </label><input type="password" name="password" />            
+        </div>
+        <p></p>
+        <input type="submit"/>
+    </fieldset>
+}
