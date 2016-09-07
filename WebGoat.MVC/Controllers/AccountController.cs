@@ -7,9 +7,9 @@ using System.Web.Security;
 
 namespace WebGoat.MVC.Controllers
 {
-    public class AuthenticationController : Controller
+    public class AccountController : Controller
     {
-        public ActionResult Login()
+        public ActionResult LogOn()
         {
             return View();
         }
@@ -21,7 +21,7 @@ namespace WebGoat.MVC.Controllers
 	    }
 
 		[HttpPost]
-	    public ActionResult Login(string username, string password)
+	    public ActionResult LogOn(string username, string password)
 	    {
 		    FormsAuthentication.SetAuthCookie(username, createPersistentCookie: false);
 			return RedirectToMain();

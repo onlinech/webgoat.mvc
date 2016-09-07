@@ -22,11 +22,11 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>User: @User.Identity.Name</li>
-                        <li>@Html.ActionLink("Logout", "Logout", "Authentication")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
                     }
                     else
                     {
-                        <li>@Html.ActionLink("Login", "Login", "Authentication")</li>
+                        <li>@Html.ActionLink("Login", "LogOn", "Account")</li>
                     }
                 </ul>
             </nav>
